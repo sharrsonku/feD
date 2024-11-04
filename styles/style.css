@@ -1,0 +1,828 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+@font-face {
+  font-family: "Signika";
+  src: url("./font/Signika-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Signika";
+  src: url("font/Signika-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Signika";
+  src: url("font/Signika-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+header {
+  top: 0;
+  color: #024089;
+  justify-content: space-evenly;
+  height: fit-content;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  z-index: 999;
+  position: sticky;
+}
+
+.logo.scrolled {
+  background-color: transparent;
+}
+
+.logo {
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  transition: transform 0.3s ease, color 0.3s ease;
+  grid-row: 2;
+  grid-column: 1;
+}
+
+/* .hide {
+  transform: translateY(-100%);
+} */
+
+.logo img {
+  width: 13em;
+  height: auto;
+  align-self: center;
+  padding-top: 3em;
+}
+
+body {
+  font-family: "Signika", sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: #daefff;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  z-index: -1;
+}
+
+#home {
+  font-family: "Signika", sans-serif;
+  /* corrected font-family */
+  text-align: center;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: #daefff;
+  background-image: url("../images/back.jpg");
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container-siroop {
+  display: flex;
+  height: fit-content;
+  flex-direction: column; /* Zorgt ervoor dat elementen onder elkaar staan */
+  align-items: center; /* Center de elementen horizontaal */
+  justify-content: center; /* Center de elementen verticaal */
+  text-align: center; /* Zorg ervoor dat de tekst in het midden staat */
+}
+
+.lines {
+	grid-column: 1;        
+	grid-row: 1;           
+	align-self: center;    
+	justify-self: center;  
+	text-align: center;
+	margin-left: 2em;
+	
+  }
+
+.product{color: #00428f;}
+
+.content-section{background-color:#4191cf;}
+
+
+  .line{
+	color: white;
+font-size: 3em;
+display: block;}
+
+.H{
+	color: white;
+font-size: 3em;
+display: block;}
+
+
+
+
+
+
+nav {
+  justify-content: space-between;
+  background-color: rgba(21, 123, 225, 0);
+}
+
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav li {
+  height: 1em;
+}
+
+nav a {
+  height: 100%;
+  padding: 0 1em;
+  text-decoration: none;
+  display: flex;
+  align-items: first baseline;
+  color: white;
+  font-weight: bold;
+  font-family: "Signika", sans-serif;
+  font-size: 1.5em;
+}
+
+nav a:hover {
+  background-color: rgb(143, 190, 231);
+}
+/* 
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  transform: translateY(20em);
+} */
+
+.navigation-buttons button {
+  background-color: rgb(143, 190, 231);
+  /* Achtergrondkleur van de knoppen */
+  border: none;
+  border-radius: 100%;
+  padding: 0.5em 0.5em;
+  margin: 0 5px;
+  height: 1.5em;
+  width: 1.5em;
+  /* Ruimte tussen de knoppen */
+  cursor: pointer;
+  /* Pointer cursor bij hover */
+}
+
+.navigation-buttons button.active {
+  border: 0.1em solid #0056b3;
+  /* Optioneel: grenskleur van de actieve knop */
+}
+
+.menu-icon {
+  display: none;
+}
+
+.menu-icon i {
+  color: #ffffff;
+  font-size: 1.3em;
+  display: none;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 999;
+  background-color: rgb(143, 190, 231);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2em;
+  font-size: 1.2em;
+  font-weight: bolder;
+}
+
+.sidebar.active {
+  display: block; /* Maak de sidebar zichtbaar wanneer de .active klasse wordt toegevoegd */
+}
+
+.sidebar li {
+  width: 100%;
+}
+
+.main .text-center {
+  font-size: 3em;
+  font-family: "Signika", sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  grid-column: 2;
+  grid-row: 1;
+  color: #ffffff;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-family: "Signika", sans-serif;
+  font-weight: bold;
+  line-height: 2.8em;
+}
+
+  .container-home {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh; /* Verhoog tot volledige schermhoogte */
+    overflow: hidden;
+}
+  
+  .text-container {
+	width: 25%; /* Linkerdeel van 25% */
+
+	align-items: flex-start; /* Zet tekst links uitgelijnd */
+	justify-content: center; /* Centreert de inhoud verticaal */
+	color: white;
+	text-align: center;
+	z-index: 1;
+  }
+
+  .flag-welkom {
+	font-size: 2em;
+	color: white;
+	margin-bottom: 10px; /* Ruimte onder de "WELKOM" tekst */
+	background-color: orange;
+	width: fit-content;
+	margin-left: 11em;
+  }
+  .si{
+	margin: 0%;
+  }
+  
+  
+  .button-contain button {
+	padding: 10px 20px;
+	font-size: 1em;
+	margin-top: 20px;
+	cursor: pointer;
+	background-color: #ffffff;
+	color: #024089;
+	border: none;
+	border-radius: 5px;
+
+	cursor: pointer;
+	font-size: 1.2em;
+	font-weight: bold;
+	width: 8em;
+	font-family: "Signika", sans-serif;
+	box-shadow: 0 0.5em 0 #daefff;
+  }
+  
+  .line{
+	color: white;
+	font-size: 3em;
+	display: block;
+  }
+  
+.H{font-size: 2em;
+margin-left: 6em;
+transform: translateY(-2em);}
+ 
+  video {
+	width: 75%; /* Rechterdeel van 75% */
+	height: 100%; /* Zorgt dat video de volledige hoogte inneemt */
+	object-fit: cover; /* Video vult het gebied zonder vervorming */
+	margin-right: 18em;
+	transform: translateY(-12em);
+  }
+  
+  
+
+
+.button-contain {
+	grid-column: 1;        /* Derde kolom */
+	grid-row: 1/ span 3;           /* Tweede rij */
+	align-self: center;    /* Verticaal centreren in de cel */
+	justify-self:self-end;  /* Horizontaal centreren */
+  }
+
+
+
+/* Video styling */
+
+
+
+.main-text {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  color: #ffffff;
+  font-size: 2em;
+  padding: 0 6em;
+}
+
+.headerline {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.headerline img {
+  width: 12em;
+  height: auto;
+  transform: translateY(-2em);
+}
+
+.ontdek .text-center {
+  font-size: 4em;
+  color: #0056b3;
+}
+.ontdek {
+  width: 100vw;
+  height: 100vh;
+}
+
+.text-center {
+  font-size: 2.5em;
+  color: #ffffff;
+  font-family: "Signika", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: -0.04em;
+  grid-column: 1 / span 2;
+  grid-row: 2;
+}
+
+.text-center0 {
+  font-size: 3em;
+  color: white;
+  padding-top: 2em;
+}
+
+.TTO {
+  height: 100vh;
+  width: 100vw;
+  background-color: #004ea1;
+  justify-content: center;
+  align-items: center;
+}
+
+.facts-row h2:first-of-type {
+  font-size: 6em;
+  color: #013d7e;
+  font-family: "Signika", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: -0.04em;
+  grid-row: 1;
+  grid-column: 1 / span 3;
+  padding: 0em 4em;
+}
+.facts-row h2 {
+  font-size: 4.5em;
+  color: #00428f;
+  font-weight: bolder;
+}
+
+.facts-row h2:nth-of-type(3) {
+  font-size: 4.5em;
+  color: #00428f;
+  font-weight: bolder;
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.slider-container1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; /* Verberg niet-zichtbare inhoud */
+  background-color: #00b8ed;
+}
+
+.slider1 {
+  display: flex; /* Maak een flex-container voor de slides */
+  transition: transform 0.5s ease; /* Zorg voor een soepele overgang */
+  gap: 1em;
+}
+
+.slider-container3 {
+  overflow: hidden; /* Zorg ervoor dat de afbeeldingen niet buiten de container komen */
+  width: 100vw; /* Zorg ervoor dat de container 100% van de beschikbare breedte gebruikt */
+  position: relative; /* Voor het positioneren van de knoppen */
+}
+
+
+
+.backkkk {
+  background-color: #0056b3;
+}
+
+.prev,
+.next {
+  transform: translateY(60%);
+  background-color: rgb(255, 255, 255);
+  color: rgb(95, 95, 95);
+  border: none;
+  padding: 1em;
+  cursor: pointer;
+  position: absolute;
+  font-size: 1.4em;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.prev {
+  left: 1em;
+  box-shadow: -0.1em 0.1em 0em rgb(128, 178, 248);
+}
+
+.next {
+  right: 1em;
+  box-shadow: -2em 2em 0em, rgb(0, 0, 0);
+}
+
+.facts-row {
+  font-size: 0.7em;
+  padding: 0em 1em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  justify-items: center; /* Horizontaal centreren */
+  align-items: center; /* Verticaal centreren */
+
+  background-color: #00b8ed;
+}
+.facts-row img:first-of-type {
+  grid-row: 2;
+  grid-column: 1;
+}
+.facts-row img:nth-of-type(2) {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.facts-row img:nth-of-type(3) {
+  grid-row: 2;
+  grid-column: 3;
+}
+
+.column .text-center:nth-of-type(2) {
+  grid-column: 2;
+}
+
+.facts-row p {
+  color: #00428f;
+  font-size: 2em;
+}
+
+.icon-circle {
+  height: 50px;
+  width: 50px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  /* transform: translate(-30em, -6.7em); */
+  box-shadow: 1px 2px 0px rgba(123, 176, 250, 0.5);
+}
+
+.icon-circle svg {
+  width: 35px;
+  /* Grootte van het kruisje */
+  height: 35px;
+  fill: #000000;
+  /* Kleur van het kruisje */
+}
+
+.card-container .card:first-of-type {
+  margin-bottom: 20px; /* Pas dit aan naar de gewenste spatie */
+}
+
+.card-container h2 {
+  font-size: 4.5em;
+  color: #ffffff;
+  font-family: "Signika", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: -0.04em;
+  grid-column: 1 / span 2;
+  grid-row: 1;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+  grid-auto-rows: auto; /* Rows adjust automatically based on content height */
+  gap: 2em; /* Space between cards */
+  align-items: start; /* Align cards to the top */
+  justify-content: center; /* Center cards horizontally */
+  padding-bottom: 5em;
+  background-color: #00428f; /* Background color for container */
+}
+
+.card {
+  background-color: #00b8ed; /* Background color for cards */
+  border-radius: 8px; /* Rounded corners for cards */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  padding: 20px; /* Padding for cards */
+}
+
+/* Position specific cards */
+.card-container:nth-of-type(1) {
+  grid-column: 1; /* First card in the left column */
+  grid-row: 1; /* Place it in the first row */
+}
+
+.card-container:nth-last-of-type(2) {
+  grid-column: 2; /* Second-last card in the right column */
+}
+
+.card-container:nth-of-type(3) {
+  grid-column: 2; /* Third card also in the right column */
+}
+
+.card img {
+  max-width: 100%; /* Zorg ervoor dat afbeeldingen responsief zijn */
+  height: auto; /* Zorg ervoor dat de hoogte automatisch is */
+}
+
+.card h2 {
+  color: #00428f;
+}
+
+.card p {
+  color: #333;
+}
+
+.button {
+  background-color: #ffffff;
+  color: #024089;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: bold;
+  width: 8em;
+  font-family: "Signika", sans-serif;
+  box-shadow: 0 0.5em 0 #daefff;
+  padding: 10px 20px;
+  align-self: end; /* Plaats de button aan de onderkant van het grid-vak */
+  justify-self: center; /* Centreer de button horizontaal */
+}
+
+.contactpopup img {
+  object-fit: contain;
+  display: block;
+}
+
+/* Zorg ervoor dat de popup aanvankelijk verborgen is */
+.contactpopup {
+justify-content: center;
+align-items: center;
+  display: none; /* Begin met verbergen */
+  position: fixed; /* Zorg ervoor dat het vast staat */
+  z-index: 1000; /* Zorg dat het boven andere elementen staat */
+  transition: bottom 0.5s ease; /* Zorg voor een soepele overgang */
+  width: 100%;
+  z-index: 999;
+
+}
+.contactpopup.show img {
+  width: 20em;
+  height: 20em;
+}
+
+.contactpopup.show {
+  display:flex;
+}
+
+.content-section {
+  display: flex;
+  width: 100%;
+  height: fit-content; /* Hoogte ingesteld op 33% van de viewport */
+  margin-bottom: 20em; /* Voeg 30px ruimte onder elke content-sectie toe */
+}
+
+.content-section:nth-of-type(2) {
+  background-color: #0056b3;
+}
+
+.product:nth-of-type(1) {
+  color: #fffafa;
+  font-family: "Signika", sans-serif;
+  font-size: 2em;
+}
+
+.left-box,
+.right-box {
+  width: 50%; /* Beide vakken nemen 50% van de sectie breedte in */
+  padding: 1em;
+  color: white;
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+.left-box {
+  flex-direction: column; /* Zet items onder elkaar */
+  font-family: "Signika", sans-serif;
+  color: #ffffff;
+  font-size: 1.8em;
+  padding-left: 4em;
+}
+.right-box {
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-button {
+  padding: 0.8em 0.8em;
+  font-size: 1em;
+  color: #0056b3;
+  background-color: #ffffff; /* Blauwe achtergrond */
+  border: none;
+  font-weight: bold;
+  font-family: "Signika", sans-serif;
+  border-radius: 0.5em;
+  cursor: pointer;
+  box-shadow: 0em 0.2em 0em #c8e2f5;
+  transition: background-color 0.3s, transform 0.3s;
+}
+footer {
+	display: flex; /* Zorg ervoor dat de footer flex is */
+	align-items: center; /* Center de inhoud verticaal */
+	justify-content: center; /* Center de inhoud horizontaal */
+	background-image: url(../images/backgroundwave.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: #000000; /* Tekstkleur, zorg ervoor dat dit goed zichtbaar is */
+	position: relative; /* Zorg dat de footer zich op de juiste manier gedraagt */
+	height: 14em; /* Hoogte van de footer */
+	width: 100%; /* Volledige breedte van de footer */
+	margin-top: auto; /* Dit zorgt ervoor dat de footer onder de inhoud komt bij gebruik van flexbox */
+  }
+  
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+  /* startje */
+  --color-text: #111;
+  --color-background: #eee;
+}
+
+
+
+
+@media screen and (max-width: 837px) {
+  .icon-circle {
+    display: block; /* Hamburger-icoon zichtbaar op kleinere schermen */
+    cursor: pointer;
+  }
+
+  .hideOnMobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  header {
+    height: auto;
+  }
+}
+
+
+
+@media (min-width: 1361px) {
+  .logo {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 841px) {
+  h1 {
+    text-align: center;
+    /* Linkszijdig uitlijnen voor grotere schermen */
+    grid-column: 1;
+    /* Verspreid over meerdere kolommen indien nodig */
+    grid-row: 2;
+    /* Verspreid over meerdere kolommen indien nodig */
+    font-size: 2em;
+  }
+  }
+
+
+
+/* Wrapper styling */
+.wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 900px; /* Increased max width to fit larger slider */
+  overflow: hidden;
+  margin: auto;
+}
+
+/* Slider container styling */
+.slider-container {
+  display: flex;
+  overflow: hidden;
+}
+
+/* Slider inner container styling */
+.slider4 {
+  display: flex;
+  translate: calc(50%, -50%);
+  transition: transform 0.5s ease;
+  gap: 40px;
+  width: calc(
+    3 * 33.33% + 2 * 40px
+  ); 
+  z-index: -1;
+padding-bottom: 12em;
+}
+
+/* Images styling */
+.slider4 img {
+  width: calc(
+    (100% - 2 * 40px) / 3
+  ); /* Adjusted width to fit 3 images with 40px gaps */
+  flex-shrink: 0;
+  height: auto;
+}
+
+/* Media query voor schermen smaller dan 837 pixels */
+@media (max-width: 837px) {
+	.card-container {
+	  grid-template-columns: 1fr; /* Maak één kolom, zodat kaarten onder elkaar komen */
+	}
+  
+	.card-container h2 {
+	  font-size: 2.5em; /* Optioneel: verklein de titel bij kleinere schermen */
+	}
+  }
+
+
+/* Media query voor kleinere schermen */
+@media (max-width: 768px) {
+	.container-home video {
+	  max-width: 50%; /* Zorgt ervoor dat de video binnen de breedte blijft */
+	  height: auto; /* Proportioneel behouden */
+	}
+  }
+
+
+/* Media query voor schermen smaller dan of gelijk aan 837 pixels */
+@media (max-width: 837px) {
+    .content-section {
+        display: flex;
+        flex-direction: column; /* Verander de richting naar kolom */
+    }
+
+    .left-box,
+    .right-box {
+        width: 100%; /* Maak ze 100% breed in mobiele weergave */
+    }
+
+    .right-box {
+        order: -1; /* Zorg ervoor dat de right-box boven de left-box komt */
+    }
+}
+
+/* Basis stijl voor de product header */
+.product:nth-of-type(1) {
+    color: #fffafa;
+    font-family: "Signika", sans-serif;
+	text-align: left;
+    font-size: 1em; /* Dit is de standaardgrootte, kan aangepast worden in de media query */
+	padding: 0%;
+}
+.left-box{padding-left: 1em;}
+
+/* Media query voor schermen kleiner dan of gelijk aan 837 pixels */
+@media (max-width: 837px) {
+    .slider4 img {
+        flex: 0 0 100%; /* Zorg ervoor dat er maar één afbeelding zichtbaar is */
+    }
+}

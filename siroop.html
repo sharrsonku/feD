@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siroop Producten</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+	<nav>
+		<ul class="desktop-menu">
+			<li class="hideOnMobile"><a href="producten">PRODUCTEN</a></li>
+			<li class="hideOnMobile">
+				<a href="#" class="dropdown-toggle">VERANTWOORDELIJKHEID</a>
+				<ul class="dropdown" style="display: none;">
+					<li><a href="duurzaamheid.html">Duurzaamheid</a></li>
+					<li><a href="ingredienten.html">Ingrediënten</a></li>
+					<li><a href="onzepartners.html">Onze partners</a></li>
+				</ul>
+			</li>
+			<li class="hideOnMobile"><a href="ons verhaal">ONS VERHAAL</a></li>
+			<li class="hideOnMobile"><a href="veelgestelde vragen">VEELGESTELDE VRAGEN</a></li>
+			<li class="hideOnMobile"><a href="neem contact op">NEEM CONTACT OP</a></li>
+			<button class="icon-circle mobile-icon" aria-label="Open menu" onclick="toggleSidebar()">
+				<svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24">
+					<path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" />
+				</svg>
+			</button>
+		</ul>
+
+		<!-- Sidebar-menu voor mobiel -->
+		<ul class="sidebar" aria-label="Mobiele navigatie">
+			<li class="icon-circle mobile-icon">
+				<button aria-label="Sluit menu" onclick="toggleSidebar()">
+					<svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 -960 960 960">
+						<path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+					</svg>
+				</button>
+			</li>
+			<li><a href="producten">PRODUCTEN</a></li>
+			<li>
+				<a href="#" class="dropdown-toggle">VERANTWOORDELIJKHEID</a>
+				<ul class="dropdown">
+					<li><a href="duurzaamheid.html">Duurzaamheid</a></li>
+					<li><a href="ingredienten.html">Ingrediënten</a></li>
+					<li><a href="onzepartners.html">Onze partners</a></li>
+				</ul>
+			</li>
+			<li><a href="ons verhaal">ONS VERHAAL</a></li>
+			<li><a href="veelgestelde vragen">VEELGESTELDE VRAGEN</a></li>
+			<li><a href="neem contact op">NEEM CONTACT OP</a></li>
+		</ul>
+	</nav>
+</header>
+
+
+    <section class="container-siroop">
+        <p class="flag-welkom si">PRODUCTEN</p>
+        <h1 class="text-center">SIROOP</h1>
+
+        <main>
+            <div class="content-section">
+                <div class="left-box">
+                    <h2 class="product">Orange Zero</h2>
+                    <p>Ervaar de iconische en geliefde Capri-Sun-sinaasappelsmaak in een nieuwe vorm – als concentraat! Voeg gewoon water toe en voilà,
+                    je krijgt de heerlijke smaak van Capri-Sun-shine, nu zonder toegevoegde suikers.</p>
+                    <ul>
+                        <li class="tick-circle"><span>Bevat vruchtensap</span></li>
+                        <li class="tick-circle"><span>Extra vitamines</span></li>
+                        <li class="tick-circle"><span>Geen kunstmatige smaakstoffen</span></li>
+                        <li class="tick-circle">
+                            <span>Verpakking is gemaakt van minimaal 80% recyclebaar materiaal (fles is gemaakt van 100% gerecycled materiaal exclusief dop &amp; label)</span>
+                        </li>
+                    </ul>
+                    <button class="info-button">Meer informatie verkrijgen</button>
+                </div>
+                <div class="right-box"><img src="images/siroop1.png" alt="Orange Zero fles"></div>
+            </div>
+
+            <div class="content-section">
+                <div class="left-box">
+                    <h2 class="product">Summer Fruits Zero</h2>
+                    <p>Geniet van een vitaminerijke siroop met Capri-Sun. Ervaar de frisse smaak van zomerfruit in elke slok.</p>
+                    <ul>
+                        <li class="tick-circle"><span>Bevat vruchtensap</span></li>
+                        <li class="tick-circle"><span>Extra vitamines</span></li>
+                        <li class="tick-circle"><span>Geen kunstmatige smaakstoffen</span></li>
+                        <li class="tick-circle">
+                            <span>Verpakking is gemaakt van minimaal 80% recyclebaar materiaal (fles is gemaakt van 100% gerecycled materiaal exclusief dop &amp; label)</span>
+                        </li>
+                    </ul>
+                    <button class="info-button">Meer informatie verkrijgen</button>
+                </div>
+                <div class="right-box"><img src="images/siroop2.png" alt="Summer Fruits Zero fles"></div>
+            </div>
+        </main>
+
+
+
+		<div class="slider-container3">
+			<button class="prev" onclick="prevSlide2()">&#10094;</button>
+			<button class="next" onclick="nextSlide2()">&#10095;</button>
+			
+			<div class="slider-container3">
+                <div class="wrapper">
+                    <div class="slider-container">
+                        <div class="slider4">
+                            <img src="images/orangenoadded.png" alt="Foto 1" />
+                            <img src="images/siroop1.png" alt="Foto 2" />
+                            <img src="images/330ml.png" alt="Foto 3" />
+                            <img src="images/zero.png" alt="Foto 4" />
+                        </div>
+                    </div>
+                    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                </div>
+            
+            </div>
+			
+    <footer>
+        <div class="contactpopup" id="contactPopup">
+            <img src="images/contact.png" alt="Contact afbeelding">
+        </div>
+        
+    </footer>
+<!-- <div class="logo">
+            <img src="images/capri-sun-logo.png" alt="Capri-Sun logo">
+        </div> -->
+    <script  src="scripts/script.js"></script>
+</body>
+</html>
